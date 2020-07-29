@@ -1,4 +1,4 @@
-﻿Shader "GKit.Shader/lit/Standard-DoubleSided"
+﻿Shader "GKit.UnityShader/lit/Standard-DoubleSided"
 {
 	Properties
 	{

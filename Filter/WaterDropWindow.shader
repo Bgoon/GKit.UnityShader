@@ -1,4 +1,4 @@
-﻿Shader "GKit.Shader/Filter/WaterDropWindow"
+﻿Shader "GKit.UnityShader/Filter/WaterDropWindow"
 {
     Properties
     {

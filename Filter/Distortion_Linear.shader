@@ -1,4 +1,4 @@
-﻿Shader "GKit.Shader/Filter/Distortion_Linear" { 
+﻿Shader "GKit.UnityShader/Filter/Distortion_Linear" { 
 	Properties{
 		_MainTex("Albedo", 2D) = "white" {}
 		_Size("Distortion Size", Range(0, 0.1)) = 0.05

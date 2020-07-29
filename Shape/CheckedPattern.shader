@@ -1,4 +1,4 @@
-﻿Shader "GKit.Shader/Shape/CheckedPattern" {
+﻿Shader "GKit.UnityShader/Shape/CheckedPattern" {
 	Properties {
 		_PatternSize("Pattern Size", Float) = 1
 		_ColorA("Color A", Color) = (1, 1, 1, 1)

@@ -1,11 +1,4 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
-// Unlit shader. Simplest possible colored shader.
-// - no lighting
-// - no lightmap support
-// - no texture
-
-Shader "GKit.Shader/Shape/RightTriangle" {
+﻿Shader "GKit.UnityShader/Shape/RightTriangle" {
 	Properties{
 		_Color("Main Color", Color) = (1,1,1,1)
 		

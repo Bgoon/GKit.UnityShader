@@ -1,4 +1,4 @@
-﻿Shader "GKit.Shader/Filter/Blur" {
+﻿Shader "GKit.UnityShader/Filter/Blur" {
 	Properties{
 		_Size("Blur Size", Range(0, 50)) = 1
 		_Alpha("Alpha", Range(0, 1)) = 1

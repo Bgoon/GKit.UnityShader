@@ -1,4 +1,4 @@
-﻿Shader "GKit.Shader/Common/Texture" {
+﻿Shader "GKit.UnityShader/Common/Texture" {
 	Properties {
 		_Color ("Color", Color) = (1, 1, 1, 1)
 		_MainTex ("Texture", 2D) = "white" {}

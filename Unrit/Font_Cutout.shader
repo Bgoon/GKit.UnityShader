@@ -1,4 +1,4 @@
-﻿Shader "GKit.Shader/Common/Font_Cutout" {
+﻿Shader "GKit.UnityShader/Common/Font_Cutout" {
 	Properties {
 		[PerRendererData] _MainTex ("Font Texture", 2D) = "white" {}
 		_Color("Font Color", Color) = ( 1, 1, 1, 1 )

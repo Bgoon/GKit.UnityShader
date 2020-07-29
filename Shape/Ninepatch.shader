@@ -1,4 +1,4 @@
-﻿Shader "GKit.Shader/Ninepatch" {
+﻿Shader "GKit.UnityShader/Ninepatch" {
 	Properties {
 		_MainTex ("Texture", 2D) = "white" {}
 		_EdgeFactor ("Edge Factor", Float) = 1

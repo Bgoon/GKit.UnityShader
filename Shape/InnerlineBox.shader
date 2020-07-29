@@ -1,4 +1,4 @@
-﻿Shader "GKit.Shader/Shape/Innerline" {
+﻿Shader "GKit.UnityShader/Shape/Innerline" {
 	Properties{
 		_Color("Main Color", Color) = (1,1,1,1)
 		_Width("Line Width", Float) = 1

@@ -1,4 +1,4 @@
-﻿Shader "GKit.Shader/Projector/Multiply" {
+﻿Shader "GKit.UnityShader/Projector/Multiply" {
 	Properties{
 		_ShadowTex("Cookie", 2D) = "gray" {}
 		_FalloffTex("FallOff", 2D) = "white" {}

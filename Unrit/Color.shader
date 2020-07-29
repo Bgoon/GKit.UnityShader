@@ -1,4 +1,4 @@
-﻿Shader "GKit.Shader/Common/Color" {
+﻿Shader "GKit.UnityShader/Common/Color" {
 	Properties{
 		_Color("Main Color", Color) = (1,1,1,1)
 		_MaskLayer("Mask Layer", Int) = 0

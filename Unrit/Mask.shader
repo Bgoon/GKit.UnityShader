@@ -1,4 +1,4 @@
-﻿Shader "GKit.Shader/Common/Mask" {
+﻿Shader "GKit.UnityShader/Common/Mask" {
 	Properties{
 		_WriteMaskLayer("WriteMask Layer", Int) = 0
 	}

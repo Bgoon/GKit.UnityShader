@@ -1,11 +1,4 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
-// Unlit shader. Simplest possible colored shader.
-// - no lighting
-// - no lightmap support
-// - no texture
-
-Shader "GKit.Shader/Common/AlphaColor" {
+﻿Shader "GKit.UnityShader/Common/AlphaColor" {
 	Properties{
 		_Color("Main Color", Color) = (1,1,1,1)
 		_MaskLayer("Mask Layer", Int) = 0

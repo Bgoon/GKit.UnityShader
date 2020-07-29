@@ -1,4 +1,4 @@
-﻿Shader "GKit.Shader/Special/DoorTransparent"
+﻿Shader "GKit.UnityShader/Special/DoorTransparent"
 {
 	Properties{
 		_Color("Main Color", Color) = (1,1,1,1)

@@ -1,4 +1,4 @@
-﻿Shader "GKit.Shader/Common/Image_Cutout" {
+﻿Shader "GKit.UnityShader/Common/Image_Cutout" {
 	Properties {
 		_MainTex ("Texture", 2D) = "white" {}
 		_Cutoff ("Alpha Cutoff", Range(0, 1)) = 0.5

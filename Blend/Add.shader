@@ -1,4 +1,4 @@
-﻿Shader "GKit.Shader/Blend/Add" {
+﻿Shader "GKit.UnityShader/Blend/Add" {
 	Properties {
 		_Color ("Color", Color) = (1, 1, 1, 1)
 		_MainTex ("Texture", 2D) = "white" {}
