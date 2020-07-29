@@ -1,4 +1,4 @@
-﻿Shader "GKit.UnityShader/Filter/Distortion_Linear" { 
+﻿Shader "GKit.UnityShader/Filter/Distortion-Radian" { 
 	Properties{
 		_MainTex("Albedo", 2D) = "white" {}
 		_Size("Distortion Size", Range(0, 0.1)) = 0.05
@@ -55,7 +55,8 @@
 				float2 screenUV = i.screenPos.xy / i.screenPos.w;
 				
 				fixed4 distMap = tex2D(_MainTex, i.uv);
-				screenUV += distMap.r * _Size;
+				float2 normal = normalize(float2(i.uv.x, 1-i.uv.y) - 0.5);
+				screenUV += normal * (distMap.x * _Size);
 
 				fixed4 col = tex2D(_ScreenTex, screenUV);
 				return col;

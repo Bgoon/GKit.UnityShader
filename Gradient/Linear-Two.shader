@@ -1,4 +1,4 @@
-﻿Shader "GKit.UnityShader/Gradient/Linear_Two"
+﻿Shader "GKit.UnityShader/Gradient/Linear-Two"
 {
 	Properties {
 		_ColorA("Color A", Color) = (1, 1, 1, 1)

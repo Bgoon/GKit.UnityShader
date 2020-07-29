@@ -1,16 +1,14 @@
-﻿Shader "GKit.UnityShader/Common/Image_Cutout" {
+﻿Shader "GKit.UnityShader/Unlit/Texture" {
 	Properties {
+		_Color ("Color", Color) = (1, 1, 1, 1)
 		_MainTex ("Texture", 2D) = "white" {}
-		_Cutoff ("Alpha Cutoff", Range(0, 1)) = 0.5
 		_MaskLayer("Mask Layer", Int) = 0
 		_MaskComp("Mask Composition", Int) = 0
 		_MaskOp("Mask Operation", Int) = 0
 	}
 	SubShader {
-		Tags { "RenderType" = "Transparent" "Queue" = "Transparent" "IgnoreProjector" = "True" }
-		ZWrite Off
+		Tags { "RenderType" = "Opaque" "Queue" = "Geometry" }
 		Cull Off
-		Blend SrcAlpha OneMinusSrcAlpha
 
 		Stencil{
 			Ref [_MaskLayer]
@@ -35,9 +33,9 @@
 				float2 uv : TEXCOORD0;
 			};
 
+			fixed4 _Color;
 			sampler2D _MainTex;
 			float4 _MainTex_ST;
-			float _Cutoff;
 			
 			v2f vert (appdata v) {
 				v2f o;
@@ -47,11 +45,9 @@
 			}
 			
 			fixed4 frag (v2f i) : SV_Target {
+				// sample the texture
 				fixed4 col = tex2D(_MainTex, i.uv);
-
-				col.a *= col.a > _Cutoff;
-
-				return col;
+				return col * _Color;
 			}
 			ENDCG
 		}

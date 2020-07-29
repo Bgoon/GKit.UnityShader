@@ -1,4 +1,4 @@
-﻿Shader "GKit.UnityShader/Common/Vector" {
+﻿Shader "GKit.UnityShader/Unlit/Vector" {
 	Properties {
 		[PerRendererData] _MainTex("Sprite Texture", 2D) = "white" {}
 		_Color("Tint", Color) = (1,1,1,1)

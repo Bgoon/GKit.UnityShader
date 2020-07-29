@@ -1,21 +1,21 @@
-﻿Shader "GKit.UnityShader/Common/Color" {
+﻿Shader "GKit.UnityShader/Unlit/AlphaColor" {
 	Properties{
 		_Color("Main Color", Color) = (1,1,1,1)
 		_MaskLayer("Mask Layer", Int) = 0
 		_MaskComp("Mask Composition", Int) = 0
 		_MaskOp("Mask Operation", Int) = 0
 	}
-
 	SubShader{
-		Tags{ "RenderType" = "Opaque"  "Queue" = "Transparent"/*"Queue" = "Geometry"*/ }
+		Tags{ "RenderType"="Transparent" "Queue"="Transparent" }
+		ZWrite Off
 		Cull Off
+		Blend SrcAlpha OneMinusSrcAlpha
 
 		Stencil{
 			Ref [_MaskLayer]
 			Comp [_MaskComp]
 			Pass [_MaskOp]
 		}
-
 		Pass{
 			CGPROGRAM
 			#pragma target 2.0
@@ -25,7 +25,7 @@
 			#include "UnityCG.cginc"
 
 			struct appdata {
-				float4 vertex : POSITION;
+				float4 vertex :POSITION;
 			};
 
 			struct v2f {
@@ -40,10 +40,10 @@
 				return o;
 			}
 
-			fixed4 frag(v2f i) : COLOR{
+			fixed4 frag(v2f i) : COLOR {
 				return _Color;
 			}
-		ENDCG
+			ENDCG
 		}
 	}
 
