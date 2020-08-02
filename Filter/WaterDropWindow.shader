@@ -59,7 +59,7 @@
 
 				//Identity
 				float2 id = floor(gridUV);
-				float n = SampleNoise(id);
+				float n = FastNoise(id);
 				time += n * 6.2831;
 
 				//Animate X
@@ -123,7 +123,7 @@
 				//Sample blur
 				_SampleCount = floor(_SampleCount);
 				float rotSpace = 360. * Deg2Rad / _SampleCount;
-				float noise = SampleNoise(i.uv);
+				float noise = FastNoise(i.uv);
 				float randomFactor = noise * 0.2 + 0.8;
 				float rotation = noise + rotSpace;
 				float halfBlur = _Blur * 0.5;
